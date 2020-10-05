@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Golf Checker</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+// Set the date we're counting down to
+var countDownDate = new Date("October 5, 2020 07:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("time").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+}, 1000);
+  </script>
+</head>
+
+<body>
+<a id="current-time" style="font-size:90px">Countdown Time: </a><a id="time" style="font-size:90px"></a>
+
+<p>
+<a href="https://members.brsgolf.com/grangecastle/bookings/book/1/20201010/0840" target="_blank" rel="noreferrer" style="font-size:90px">10 Oct 8.40am</a><br>
+<a href="https://members.brsgolf.com/grangecastle/bookings/book/1/20201010/0850" target="_blank" rel="noreferrer" style="font-size:90px">10 Oct  8.50am</a><br>
+  <a href="https://members.brsgolf.com/grangecastle/bookings/book/1/20201010/0900" target="_blank" rel="noreferrer" style="font-size:90px">10 Oct 9.00am</a><br>
+<a href="https://members.brsgolf.com/grangecastle/bookings/book/1/20201010/0910" target="_blank" rel="noreferrer" style="font-size:90px">10 Oct  9.10am</a><br>
+<a href="https://members.brsgolf.com/grangecastle/bookings/book/1/20201010/0920" target="_blank" rel="noreferrer" style="font-size:90px">10 Oct  9.20am</a><br>
+<a href="https://members.brsgolf.com/grangecastle/bookings/book/1/20201010/0930" target="_blank" rel="noreferrer" style="font-size:90px">10 Oct  9.30am</a><br>  
+
+</body>
+
+</html>
